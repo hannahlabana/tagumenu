@@ -12,28 +12,28 @@
 
 @font-face {
   font-family: 'kare';
-  src: url('/kare-trial.woff2');
+  src: url('/KARE-TRIAL.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Regular.woff2');
+  src: url('/GLACIALINDIFFERENCE-REGULAR.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Bold.woff2');
+  src: url('/GLACIALINDIFFERENCE-BOLD.woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Italic.woff2');
+  src: url('/GLACIALINDIFFERENCE-ITALIC.woff2');
   font-weight: 400;
   font-style: italic;
 }
