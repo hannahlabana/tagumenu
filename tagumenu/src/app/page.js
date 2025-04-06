@@ -1,141 +1,235 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
+import Menu from "../../public/tagu_menu.json"
+import goldLeaf from "../../public/gold-leaf.png"
+import goldTree from "../../public/gold-tree.png"
 
 export default function Home() {
+  var Signature = [];
+  var Espresso = [];
+  var NonCaffeinated = [];
+  var CoffeeAddOn = [];
+  var Brunch = [];
+  var Sides = [];
+  var Main = [];
+  var MainAddOn = [];
+  var Alfresco = [];
+  var Mixers = [];
+  var Promos = [];
+  var Beers = [];
+  var Choos = [];
+
+  function Categories() {
+    Menu.forEach((item) => {
+      switch (item.category) {
+        case "Signature":
+          Signature.push(item);
+          break;
+        case "Espresso":
+          Espresso.push(item);
+          break;
+        case "Non Caffeinated":
+          NonCaffeinated.push(item);
+          break;
+        case "Add On":
+          CoffeeAddOn.push(item);
+          break;
+        case "Brunch":
+          Brunch.push(item);
+          break;
+        case "Sides":
+          Sides.push(item);
+          break;
+        case "Main":
+          Main.push(item);
+          break;
+        case "Main Add On":
+          MainAddOn.push(item);
+          break;
+        case "Alfresco":
+          Alfresco.push(item);
+          break;
+        case "Mixers":
+          Mixers.push(item);
+          break;
+        case "Promos":
+          Promos.push(item);
+          break;
+        case "Beers":
+          Beers.push(item);
+          break;
+        case "Choos":
+          Choos.push(item);
+          break;
+      }
+    });
+
+    console.log("Signature:", Signature);
+    console.log("Espresso:", Espresso);
+    console.log("Non-Caffeinated:", NonCaffeinated);
+    console.log("Coffee Add-On:", CoffeeAddOn);
+    console.log("Brunch:", Brunch);
+    console.log("Sides:", Sides);
+    console.log("Main:", Main);
+    console.log("Main Add-On:", MainAddOn);
+    console.log("Alfresco:", Alfresco);
+    console.log("Mixers:", Mixers);
+    console.log("Promos:", Promos);
+    console.log("Beers:", Beers);
+    console.log("Choos:", Choos);
+  }
+
+  useEffect(() => {
+    function addItems() {
+      var signatureList = document.getElementById('signature');
+      var espressoList = document.getElementById('espresso');
+      var nonCaffeinatedList = document.getElementById('nonCaffeinated');
+      var addOnList = document.getElementById('addOn');
+      var brunchList = document.getElementById('brunch');
+      var sidesList = document.getElementById('sides');
+
+      Signature.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <div class="flex flex-row gap-3">
+            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-black">${item.title}</span>
+            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-orange">P${item.price}</span>
+          </div>
+          <span class="text-xs lg:text-base text-tagu-red font-glacial italic leading-none tracking-widest">${item.description}</span>
+        `;
+        card.classList.add('flex', 'flex-col');
+        signatureList.appendChild(card);
+      });
+
+      Espresso.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-black">${item.title}</span>
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-orange">P${item.price}</span>
+        `;
+        card.classList.add('flex', 'flex-row', 'gap-3');
+        espressoList.appendChild(card);
+      });
+
+      NonCaffeinated.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-black">${item.title}</span>
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-orange">P${item.price}</span>
+        `;
+        card.classList.add('flex', 'flex-row', 'gap-3');
+        nonCaffeinatedList.appendChild(card);
+      });
+
+      CoffeeAddOn.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-black">${item.title}</span>
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-orange">+P${item.price}</span>
+        `;
+        card.classList.add('flex', 'flex-row', 'gap-3');
+        addOnList.appendChild(card);
+      });
+
+      Brunch.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
+          <span class="text-xs lg:text-base text-tagu-white font-glacial italic leading-none tracking-widest">${item.description}</span>
+        `;
+        card.classList.add('flex', 'flex-col');
+        brunchList.appendChild(card);
+      });
+
+      Sides.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">P${item.price}</span>
+        `;
+        card.classList.add('w-full', 'flex', 'flex-row', 'justify-between');
+        sidesList.appendChild(card);
+      });
+    }
+
+    addItems();
+  }, []);
+  
+  Categories();
+  
   return (
-    <div>
-      <section className="bg-tagu-yellow w-auto h-screen flex flex-col justify-center items-center">
-        <div className="font-kare text-9xl text-tagu-white leading-6 mb-6">TAGU</div>
-        <div className="font-balgin text-2xl text-tagu-black text-center tracking-widest">CAFE</div>
-      </section>
-      <section className="flex flex-col pt-24 h-screen bg-tagu-white w-auto pl-28 gap-24">
-        <div className="flex flex-row w-3/4 ml-auto">
-          <div className="w-3/4 flex flex-col gap-4">
-            <div className="flex flex-row items-baseline">
-              <div className="font-kare text-7xl leading-none text-tagu-red mr-3">Signature</div>
-              <div className="font-glacial text-xl leading-none text-tagu-black tracking-widest">BY TAGU</div>
+    <div className="flex flex-col overflow-x-hidden">
+      {/* TITLE PAGE */}
+      <div className="h-screen bg-tagu-yellow flex flex-col justify-center">
+        <div>
+          <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-3vh] md:mb-[-5vh]">TA</p>
+          <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-2.8vh] md:mb-[-5vh]">GU</p>
+        </div>
+        <div className="font-balgin text-xl md:text-xl text-tagu-black text-center leading-none tracking-[1.8vw] ml-4 md:ml-9">CAFE</div>
+      </div>
+      {/* COFFEE PAGE */}
+      <div id="coffeePage" className="bg-tagu-white p-12 lg:p-24 lg:items-end lg:pl-36 flex flex-col gap-8 lg:gap-12 md:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        <Image src={goldLeaf} className="absolute top-[-2.5vh] right-[-8vw] md:right-[-5vw] lg:right-[-1vw] w-28 md:w-32 xl:w-52 z-0" alt="leaf decoration" />
+        {/* SIGNATURES AND ESPRESSO */}
+        <div className="flex flex-col gap-8 md:flex-row lg:w-3/4 justify-start items-start z-30">
+          {/* SIGNATURES */}
+          <div className="md:w-1/2">
+            {/* SIGNATURE TITLE */}
+            <div className="flex flex-col 2xl:flex-row mb-4 md:items-baseline">
+              <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-red mb-[-1.5vh]">Signature</div>
+              <div className="font-glacial text-lg xl:text-2xl leading-none text-tagu-black tracking-widest ml-1">BY TAGU</div>
             </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-2xl font-glacial text-tagu-black leading-none">Kremado</span>
-                <span className="text-tagu-red font-glacial italic leading-none tracking-wide">espresso + milk with Biscoff cream & biscuit crunch</span>
-              </div>
-              <p className="text-2xl font-glacial text-tagu-black">160</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-2xl font-glacial text-tagu-black leading-none">Einspanner</span>
-                <span className="text-tagu-red font-glacial italic leading-none tracking-wide">silky espresso, luscious cream & a hint of cinnamon</span>
-              </div>
-              <p className="text-2xl font-glacial text-tagu-black">170</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-2xl font-glacial text-tagu-black leading-none">Gana Gana</span>
-                <span className="text-tagu-red font-glacial italic leading-none tracking-wide">white chocolate, oat milk & espresso + cinnamon</span>
-              </div>
-              <p className="text-2xl font-glacial text-tagu-black">150</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-2xl font-glacial text-tagu-black leading-none">Espresso Tropicana</span>
-                <span className="text-tagu-red font-glacial italic leading-none tracking-wide">citrusy espresso buzz with local kalamansi & tonic</span>
-              </div>
-              <p className="text-2xl font-glacial text-tagu-black">150</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <div className="flex flex-col gap-0.5">
-                <span className="text-2xl font-glacial text-tagu-black leading-none">Kalmahi!</span>
-                <span className="text-tagu-red font-glacial italic leading-none tracking-wide">hot meets cold in our dreamy affogato twist</span>
-              </div>
-              <p className="text-2xl font-glacial text-tagu-black">135</p>
-            </div>
+            {/* SIGNATURE ITEMS */}
+            <div id="signature" className="pl-1 pr-8 flex flex-col gap-3"></div>
           </div>
-          <div className="w-3/4 flex flex-col gap-4">
-            <div className="flex flex-row items-baseline">
-              <div className="font-kare text-7xl leading-none mr-3 text-tagu-red">ESPRESSO</div>
-              <div className="font-glacial text-xl leading-none text-tagu-black tracking-widest">BASED</div>
+          {/* ESPRESSO */}
+          <div className="md:w-1/2">
+            {/* ESPRESSO TITLE */}
+            <div className="flex flex-col 2xl:flex-row mb-4 md:items-baseline">
+              <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-red mb-[-1.5vh]">Espresso</div>
+              <div className="font-glacial text-lg xl:text-2xl leading-none text-tagu-black tracking-widest ml-1">BASED</div>
             </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Espresso</span>
-              <p className="text-2xl font-glacial text-tagu-black">90</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Americano</span>
-              <p className="text-2xl font-glacial text-tagu-black">100</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Latte</span>
-              <p className="text-2xl font-glacial text-tagu-black">125</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Spanish Latte</span>
-              <p className="text-2xl font-glacial text-tagu-black">135</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Vanilla Latte</span>
-              <p className="text-2xl font-glacial text-tagu-black">135</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Mocha</span>
-              <p className="text-2xl font-glacial text-tagu-black">140</p>
-            </div>
+            {/* ESPRESSO ITEMS */}
+            <div id="espresso" className="pl-1 pr-8 flex flex-col gap-1 md:gap-4"></div>
           </div>
         </div>
-        <div className="flex flex-row w-3/4 ml-auto">
-          <div className="w-3/4 flex flex-col gap-4">
-            <div className="flex flex-col items-baseline">
-              <div className="font-glacial text-3xl leading-none mr-3 text-tagu-red">NON CAFFEINATED</div>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Tonyo Kalmado</span>
-              <p className="text-2xl font-glacial text-tagu-black">150</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Banana Strawbs</span>
-              <p className="text-2xl font-glacial text-tagu-black">160</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Den of Tonic</span>
-              <p className="text-2xl font-glacial text-tagu-black">155</p>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Hot Chocolate</span>
-              <p className="text-2xl font-glacial text-tagu-black">125</p>
-            </div>
+        {/* NON CAFFEINATED AND ADD ONS */}
+        <div className="flex flex-col gap-8 md:flex-row lg:w-3/4">
+          {/* NON CAFFEINATED */}
+          <div className="flex flex-col gap-4 md:w-1/2">
+            <div className="font-glacial text-3xl xl:text-4xl text-tagu-red">NON CAFFEINATED</div>
+            {/* NON CAFFEINATED ITEMS */}
+            <div id="nonCaffeinated" className="pl-1 pr-8 flex flex-col gap-1 md:gap-4"></div>
           </div>
-          <div className="w-3/4 flex flex-col gap-4">
-            <div className="flex flex-col items-baseline">
-              <div className="font-glacial text-3xl leading-none mr-3 text-tagu-red">ADD ON</div>
-            </div>
-            <div className="flex flex-row gap-12 items-center justify-between w-3/4">
-              <span className="text-2xl font-glacial text-tagu-black leading-none">Oatmilk</span>
-              <p className="text-2xl font-glacial text-tagu-black">+40</p>
-            </div>
+          {/* ADD ON */}
+          <div className="flex flex-col gap-4 md:w-1/2">
+            <div className="font-glacial text-3xl xl:text-4xl text-tagu-red">ADD ON</div>
+            {/* ADD ON ITEMS */}
+            <div id="addOn" className="pl-1 pr-8 flex flex-col gap-1"></div>
           </div>
         </div>
-        
-        
-      </section>
-      <section>
-        <div className="flex flex-row h-screen bg-tagu-red">
-          <div className="font-kare text-7xl text-tagu-white">Brunch</div>
+      </div>
+      {/* BRUNCH PAGE */}
+      <div id="brunchPage" className="bg-tagu-red p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-8 lg:gap-12 xl:gap-16 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        <Image src={goldTree} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
+        {/* MAIN BRUNCH */}
+        <div className="w-10/12 xl:w-3/5 2xl:w-3/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 z-30">
+          {/* BRUNCH ITEMS */}
+          <div id="brunch" className="pl-1 pr-8 flex flex-col gap-3 w-full"></div>
+          <div className="text-base text-right md:text-lg lg:text-xl font-glacial text-tagu-white">
+            <p className="text-xs lg:text-base leading-[-3vh]">all at</p>
+            <p>P220</p>
+          </div>
         </div>
-      </section>
-      <section>
-        <div className="flex flex-row h-screen bg-tagu-blue">
-          <div className="font-kare text-7xl text-tagu-white">Main</div>
+        {/* SIDES */}
+        <div className="w-10/12 md:w-1/2 lg:w-3/4 xl:w-3/5 2xl:w-3/7 flex flex-col gap-4 xl:gap-12 z-30">
+          {/* SIDES TITLE */}
+          <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-white mb-[-1.5vh] xl:mb-[-5.5vh]">SIDES</div>
+          {/* SIDES ITEMS */}
+          <div id="sides" className="pl-1 flex flex-col gap-1 w-full"></div>
         </div>
-      </section>
-      <section>
-        <div className="flex flex-row h-screen bg-tagu-brown">
-          <div className="font-kare text-7xl text-tagu-white">Main</div>
-        </div>
-      </section>
-      <section>
-        <div className="flex flex-row h-screen bg-tagu-blue">
-          <div className="font-kare text-7xl text-tagu-white">Drinks</div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

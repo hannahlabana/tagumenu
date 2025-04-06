@@ -1,0 +1,375 @@
+[
+  {
+    "title": "Kremado",
+    "category": "Signature",
+    "description": "espresso + milk with Biscoff cream & biscuit crunch",
+    "price": 160
+  },
+  {
+    "title": "Einspanner",
+    "category": "Signature",
+    "description": "silky espresso, luscious cream & a hint of cinnamon",
+    "price": 170
+  },
+  {
+    "title": "Gana Gana",
+    "category": "Signature",
+    "description": "white chocolate, oat milk & espresso + cinnamon",
+    "price": 150
+  },
+  {
+    "title": "Espresso Tropicana",
+    "category": "Signature",
+    "description": "citrusy espresso buzz with local kalamansi & tonic",
+    "price": 150
+  },
+  {
+    "title": "Kalmahi!",
+    "category": "Signature",
+    "description": "hot meets cold in our dreamy affogato twist",
+    "price": 135
+  },
+  {
+    "title": "Espresso",
+    "category": "Espresso",
+    "description": null,
+    "price": 90
+  },
+  {
+    "title": "Americano",
+    "category": "Espresso",
+    "description": null,
+    "price": 100
+  },
+  {
+    "title": "Latte",
+    "category": "Espresso",
+    "description": null,
+    "price": 125
+  },
+  {
+    "title": "Spanish Latte",
+    "category": "Espresso",
+    "description": null,
+    "price": 135
+  },
+  {
+    "title": "Vanilla Latte",
+    "category": "Espresso",
+    "description": null,
+    "price": 135
+  },
+  {
+    "title": "Mocha",
+    "category": "Espresso",
+    "description": null,
+    "price": 140
+  },
+  {
+    "title": "Chicken Skin",
+    "category": "Sides",
+    "description": null,
+    "price": 295
+  },
+  {
+    "title": "Chicharon Bulaklak",
+    "category": "Sides",
+    "description": null,
+    "price": 350
+  },
+  {
+    "title": "Crunchy Calamares",
+    "category": "Sides",
+    "description": null,
+    "price": 375
+  },
+  {
+    "title": "Cheeeeese Sticks",
+    "category": "Sides",
+    "description": null,
+    "price": 250
+  },
+  {
+    "title": "Truffle Fries",
+    "category": "Sides",
+    "description": null,
+    "price": 250
+  },
+  {
+    "title": "Machos Nachos",
+    "category": "Sides",
+    "description": null,
+    "price": 450
+  },
+  {
+    "title": "__ Nuts!",
+    "category": "Sides",
+    "description": null,
+    "price": 150
+  },
+  {
+    "title": "Tonyo Kalmado",
+    "category": "Non Caffeinated",
+    "description": null,
+    "price": 150
+  },
+  {
+    "title": "Banana Strawbs",
+    "category": "Non Caffeinated",
+    "description": null,
+    "price": 160
+  },
+  {
+    "title": "Den of Tonic",
+    "category": "Non Caffeinated",
+    "description": null,
+    "price": 155
+  },
+  {
+    "title": "Hot Chocolate",
+    "category": "Non Caffeinated",
+    "description": null,
+    "price": 125
+  },
+  {
+    "title": "Oatmilk",
+    "category": "Add On",
+    "description": null,
+    "price": 40
+  },
+  {
+    "title": "Tequila Sunrise",
+    "category": "Mixers",
+    "description": null,
+    "price": 600
+  },
+  {
+    "title": "Screw Driver",
+    "category": "Mixers",
+    "description": null,
+    "price": 600
+  },
+  {
+    "title": "WengWeng",
+    "category": "Mixers",
+    "description": null,
+    "price": 600
+  },
+  {
+    "title": "Red Horse | Stallion",
+    "category": "Beers",
+    "description": null,
+    "price": 120
+  },
+  {
+    "title": "San Mig Light",
+    "category": "Beers",
+    "description": null,
+    "price": 120
+  },
+  {
+    "title": "Heineken",
+    "category": "Beers",
+    "description": null,
+    "price": 200
+  },
+  {
+    "title": "2L Tower Beer",
+    "category": "Promos",
+    "description": "Red Horse / Tiger",
+    "price": 500
+  },
+  {
+    "title": "Beer Bucket",
+    "category": "Promos",
+    "description": "5 + 1",
+    "price": 600
+  },
+  {
+    "title": "Buy 1+1 Mixer",
+    "category": "Promos",
+    "description": null,
+    "price": 1000
+  },
+  {
+    "title": "Walnut",
+    "category": "Choos",
+    "description": null,
+    "price": 45
+  },
+  {
+    "title": "Cheesecake",
+    "category": "Choos",
+    "description": null,
+    "price": 45
+  },
+  {
+    "title": "Oreo",
+    "category": "Choos",
+    "description": null,
+    "price": 45
+  },
+  {
+    "title": "Tagu Waffle",
+    "category": "Brunch",
+    "description": "Signature waffles with seasonal fresh fruits",
+    "price": 160
+  },
+  {
+    "title": "Maayong Bungkag",
+    "category": "Brunch",
+    "description": "Chorizo with Egg + Rice",
+    "price": 160
+  },
+  {
+    "title": "Longga Baby!",
+    "category": "Brunch",
+    "description": "Longganisa with Egg + Rice",
+    "price": 160
+  },
+  {
+    "title": "So Karne",
+    "category": "Brunch",
+    "description": "Corned Beef with Egg + Rice",
+    "price": 160
+  },
+  {
+    "title": "In the Clerb",
+    "category": "Brunch",
+    "description": "Classic clubhouse sandwhich",
+    "price": 160
+  },
+  {
+    "title": "Pork Barrel",
+    "category": "Main",
+    "description": "Pork belly rice bowl topped with egg + sauce",
+    "price": 280
+  },
+  {
+    "title": "Truffle Pasta",
+    "category": "Main",
+    "description": "Creamy truffle-infused pasta",
+    "price": 295
+  },
+  {
+    "title": "Olio’s Seafood",
+    "category": "Main",
+    "description": "Aglio olio pasta tossed with garlic, olive oil, and fresh seafood",
+    "price": 295
+  },
+  {
+    "title": "Shrimp Huevo Salado",
+    "category": "Main",
+    "description": "Deep fried shrimp + signature sauce and salted egg",
+    "price": 420
+  },
+  {
+    "title": "The Gogi",
+    "category": "Main",
+    "description": "Marinated beef rice bowl topped with fried egg",
+    "price": 295
+  },
+  {
+    "title": "Of Carbs, Sisig!",
+    "category": "Main",
+    "description": "Sisig rice jowl & belly rice bowl topped with egg",
+    "price": 280
+  },
+  {
+    "title": "Nara’s White Sauce",
+    "category": "Main",
+    "description": "Classic carbonara packed with smoky bacon",
+    "price": 280
+  },
+  {
+    "title": "Sal, Ikaw?",
+    "category": "Main",
+    "description": "Tender pork, sauteed in garlic and savory seasonings",
+    "price": 400
+  },
+  {
+    "title": "Oh Lorde!",
+    "category": "Main",
+    "description": "Juicy, fall-off-the-bone ribs",
+    "price": 495
+  },
+  {
+    "title": "Chicken Gravy Baby",
+    "category": "Main",
+    "description": "Buttered chicken and our homemade gravy",
+    "price": 675
+  },
+  {
+    "title": "CRISPY Pata!",
+    "category": "Main",
+    "description": null,
+    "price": 950
+  },
+  {
+    "title": "Rice",
+    "category": "Main Add On",
+    "description": "Crunchy pork knuckle, juicy inside, served with tangy sauce",
+    "price": 40
+  },
+  {
+    "title": "Garlic Rice",
+    "category": "Main Add On",
+    "description": null,
+    "price": 60
+  },
+  {
+    "title": "Hungry-yan?",
+    "category": "Alfresco",
+    "description": "sizzling hungarian sausage",
+    "price": 150
+  },
+
+  {
+    "title": "The Porky's",
+    "category": "Alfresco",
+    "description": "choice of pork: chops, bbq or sisig",
+    "price": 150
+  },
+  
+  {
+    "title": "Bulaklak",
+    "category": "Alfresco",
+    "description": "chicharon bulaklak",
+    "price": 150
+  },
+
+  {
+    "title": "Wings Club",
+    "category": "Alfresco",
+    "description": "4 pcs chicken wings + sauce on the side",
+    "price": 150
+  },
+
+  {
+    "title": "Better than Pepper",
+    "category": "Alfresco",
+    "description": "sizzling beef pepper steak",
+    "price": 150
+  },
+
+  {
+    "title": "Patty & Gravy",
+    "category": "Alfresco",
+    "description": "sizzling burger steak",
+    "price": 150
+  },
+
+  {
+    "title": "Golden Catch",
+    "category": "Alfresco",
+    "description": "sizzling fish fillet",
+    "price": 150
+  },
+
+  {
+    "title": "Tagu Fillet",
+    "category": "Alfresco",
+    "description": "sizzling chicken fillet topped with gravy",
+    "price": 150
+  }
+]
