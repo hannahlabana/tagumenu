@@ -12,35 +12,35 @@
 
 @font-face {
   font-family: 'kare';
-  src: url('/kare-trial.otf');
+  src: url('/kare-trial.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Regular.otf');
+  src: url('/GlacialIndifference-Regular.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Bold.otf');
+  src: url('/GlacialIndifference-Bold.woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'glacial';
-  src: url('/GlacialIndifference-Italic.otf');
+  src: url('/GlacialIndifference-Italic.woff2');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'balgin';
-  src: url('/FONTSPRING-DEMO-BALGIN-EXTRALIGHT.otf');
+  src: url('/FONTSPRING-DEMO-BALGIN-EXTRALIGHT.woff2');
   font-weight: normal;
   font-style: normal;
 }

@@ -66,19 +66,19 @@ export default function Home() {
       }
     });
 
-    console.log("Signature:", Signature);
-    console.log("Espresso:", Espresso);
-    console.log("Non-Caffeinated:", NonCaffeinated);
-    console.log("Coffee Add-On:", CoffeeAddOn);
-    console.log("Brunch:", Brunch);
-    console.log("Sides:", Sides);
-    console.log("Main:", Main);
-    console.log("Main Add-On:", MainAddOn);
-    console.log("Alfresco:", Alfresco);
-    console.log("Mixers:", Mixers);
-    console.log("Promos:", Promos);
-    console.log("Beers:", Beers);
-    console.log("Choos:", Choos);
+    // console.log("Signature:", Signature);
+    // console.log("Espresso:", Espresso);
+    // console.log("Non-Caffeinated:", NonCaffeinated);
+    // console.log("Coffee Add-On:", CoffeeAddOn);
+    // console.log("Brunch:", Brunch);
+    // console.log("Sides:", Sides);
+    // console.log("Main:", Main);
+    // console.log("Main Add-On:", MainAddOn);
+    // console.log("Alfresco:", Alfresco);
+    // console.log("Mixers:", Mixers);
+    // console.log("Promos:", Promos);
+    // console.log("Beers:", Beers);
+    // console.log("Choos:", Choos);
   }
 
   useEffect(() => {
