@@ -4,6 +4,7 @@ import Image from "next/image";
 import Menu from "../../public/tagu_menu.json"
 import goldLeaf from "../../public/gold-leaf.png"
 import goldTree from "../../public/gold-tree.png"
+import "./globals.css";
 
 export default function Home() {
   var Signature = [];
