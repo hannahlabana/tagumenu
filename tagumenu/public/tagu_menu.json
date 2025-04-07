@@ -302,13 +302,13 @@
   {
     "title": "CRISPY Pata!",
     "category": "Main",
-    "description": null,
+    "description": "Crunchy pork knuckle, juicy inside, served with tangy sauce",
     "price": 950
   },
   {
     "title": "Rice",
     "category": "Main Add On",
-    "description": "Crunchy pork knuckle, juicy inside, served with tangy sauce",
+    "description": null,
     "price": 40
   },
   {
