@@ -93,6 +93,9 @@ export default function Home() {
       var MainsList = document.getElementById('mains');
       var MainsAddOnList = document.getElementById('mainaddons');
       var AlfrescoList = document.getElementById('alfresco');
+      var MixersList = document.getElementById('mixers');
+      var BeersList = document.getElementById('beers');
+      var PromosList = document.getElementById('promos');
 
       Signature.forEach((item) => {
         var card = document.createElement('div');
@@ -162,11 +165,11 @@ export default function Home() {
         card.innerHTML = `
           <div class="flex flex-row gap-1">
             <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
-            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">| ${item.price}</span>
+            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">| P${item.price}</span>
           </div>
           <span class="text-xs lg:text-base text-tagu-white font-glacial italic leading-none tracking-widest">${item.description}</span>
         `;
-        card.classList.add('flex', 'flex-col');
+        card.classList.add('flex', 'flex-col', 'gap-1');
         MainsList.appendChild(card);
       });
 
@@ -186,9 +189,40 @@ export default function Home() {
           <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
           <span class="text-xs lg:text-base text-tagu-white font-glacial italic leading-none tracking-widest">${item.description}</span>
         `;
-        card.classList.add('flex', 'flex-col');
+        card.classList.add('flex', 'flex-col', 'gap-1');
         AlfrescoList.appendChild(card);
       });
+
+      Mixers.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>`
+        card.classList.add('flex', 'flex-row', 'gap-3');
+        MixersList.appendChild(card);
+      });
+
+      Beers.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
+          ${item.title === 'Heineken' ? `<span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">| P${item.price}</span>` : ''}
+        `;
+        card.classList.add('flex', 'flex-row', 'gap-1');
+        BeersList.appendChild(card);
+      });
+
+      Promos.forEach((item) => {
+        var card = document.createElement('div');
+        card.innerHTML = `
+          <div class="flex flex-row w-3/4 md:w-2/5 2xl:w-3/4 justify-between">
+            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">${item.title}</span>
+            <span class="text-base md:text-lg lg:text-xl font-glacial text-tagu-white">P${item.price}</span>
+          </div>
+          <span class="text-xs lg:text-base text-tagu-white font-glacial italic leading-none tracking-widest">${item.description ? item.description : ''}</span>
+        `;
+        card.classList.add('flex', 'flex-col', 'w-full');
+        PromosList.appendChild(card);
+      }); 
     }
 
     addItems();
@@ -272,26 +306,28 @@ export default function Home() {
       <div id="MainPage" className="bg-tagu-blue p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-8 lg:gap-12 xl:gap-16 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
         <Image src={eye} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
         {/* MAIN BRUNCH */}
-        <div className="w-10/12 xl:w-3/5 2xl:w-3/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 z-30">
+        <div className="w-10/12 xl:w-3/5 2xl:w-4/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 2xl:mt-4 z-30 h-5/7 2xl:mb-[-4vh]">
           {/* BRUNCH ITEMS */}
-          <div id="mains" className="pl-1 pr-8 flex flex-col gap-4 w-full"></div>
-          <div className="text-base text-right md:text-lg lg:text-xl font-glacial text-tagu-white">
-            {/* <p className="text-xs lg:text-base leading-[-3vh]">all at</p>
-            <p>P220</p> */}
-          </div>
+          <div id="mains" className="pl-1 pr-8 flex flex-col flex-wrap gap-y-6 gap-x-24 w-full"></div>
+          {/* <div className="text-base text-right md:text-lg lg:text-xl font-glacial text-tagu-wite"></div> */}
         </div>
         {/* MAIN ADD ON */}
         <div className="flex flex-col gap-2 md:w-1/2">
-            <div className="font-glacial text-3xl xl:text-4xl text-tagu-white">ADD ON</div>
-            {/* ADD ON ITEMS */}
-            <div id="mainaddons" className="pl-1 pr-8 flex flex-col gap-1"></div>
-          </div>
+          <div className="font-glacial text-3xl xl:text-4xl text-tagu-white">ADD ON</div>
+          {/* ADD ON ITEMS */}
+          <div id="mainaddons" className="pl-1 pr-8 flex flex-col gap-1 h-2/5"></div>
+        </div>
       </div>
       {/* ALFRESCO PAGE */}
-      <div id="AlfrescoPage" className="bg-tagu-brown p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-8 lg:gap-12 xl:gap-16 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+      <div id="AlfrescoPage" className="bg-tagu-brown p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-6 lg:gap-12 xl:gap-8 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
         <Image src={eye} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
-        {/* MAIN BRUNCH */}
-        <div className="w-10/12 xl:w-3/5 2xl:w-3/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 z-30">
+        {/* ALFRESCO TITLE*/}
+        <div className="flex flex-col md:items-baseline">
+          <div className="font-glacial font-bold text-lg xl:text-xl leading-none text-[#FBEFC1] ml-1 mb-2 2xl:mb-3">still mains but only</div>
+          <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-white mb-[-1.5vh] pb-1">Alfresco</div>
+          <div className="font-glacial font-bold text-lg xl:text-xl leading-none text-[#FBEFC1] ml-1">because it sizzles!</div>
+        </div>
+        <div className="w-11/12 xl:w-3/5 2xl:w-3/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 z-30">
           {/* BRUNCH ITEMS */}
           <div id="alfresco" className="pl-1 pr-8 flex flex-col gap-4 w-full"></div>
           <div className="text-base text-right md:text-lg lg:text-xl font-glacial text-tagu-white">
@@ -302,6 +338,40 @@ export default function Home() {
           </div>
           </div>
         </div>
+      </div>
+      <div id="DrinksPage" className="bg-tagu-blue p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-6 lg:gap-12 xl:gap-8 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        {/* TITLE */}
+        <div className="flex flex-col 2xl:flex-row 2xl:items-baseline 2xl:gap-2 2xl:mb-8">
+          <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-white mb-[-1.5vh]">alfresco</div>
+          <div className="font-glacial text-lg xl:text-2xl leading-none text-tagu-white tracking-widest ml-1">DRINKS</div>
+        </div>
+        <div className="flex flex-col 2xl:flex-row 2xl:gap-4 2xl:w-3/4">
+          <div className="flex flex-col w-full">
+            {/* MIXERS */}
+            <div className="flex flex-col gap-2 mb-5 2xl:mb-24">
+              <div className="flex flex-row gap-1 items-baseline">
+                <div className="font-kare text-4xl xl:text-5xl leading-none text-tagu-white mb-[-1.5vh] 2xl:mb-0">mixers</div>
+                <div className="font-glacial text-lg xl:text-xl leading-none text-tagu-white tracking-widest ml-1">P600</div>
+              </div>
+              <div id="mixers" className="pr-8 flex flex-col gap-2"></div>
+            </div>
+            {/* BEERS */}
+            <div className="flex flex-col gap-2 mb-5">
+              <div className="flex flex-row gap-1 items-baseline">
+                <div className="font-kare text-4xl xl:text-5xl leading-none text-tagu-white mb-[-1.5vh] 2xl:mb-0">beers</div>
+                <div className="font-glacial text-lg xl:text-xl leading-none text-tagu-white tracking-widest ml-1">P120</div>
+              </div>
+              <div id="beers" className="pr-8 flex flex-col gap-2"></div>
+            </div>
+          </div>
+          {/* PROMOS */}
+          <div className="flex flex-col w-full">
+            <div className="font-kare text-4xl xl:text-5xl leading-none text-tagu-white 2xl:mb-0">promos</div>
+            <div id="promos" className="pr-8 flex flex-col gap-2 w-full"></div>
+          </div>
+        </div>
+        {/* DISCLAIMER */}
+        <p className="text-tagu-white text-sm xl:text-base italic text-right font-glacial mt-6 2xl:mt-42">all items exclusive of 10% service charge</p>
       </div>
     </div>
   );
