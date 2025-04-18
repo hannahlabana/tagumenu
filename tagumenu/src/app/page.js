@@ -5,6 +5,12 @@ import Menu from "../../public/tagu_menu.json"
 import goldLeaf from "../../public/gold-leaf.png"
 import goldTree from "../../public/gold-tree.png"
 import eye from "../../public/tagueye.png"
+import walnut from "../../public/choo-walnut.png"
+import oreo from "../../public/choo-oreo.png"
+import cheesecake from "../../public/choo-cheesecake.png"
+import chooasset from "../../public/choo-asset-1.png"
+import chooasset2 from "../../public/choo-asset-2.png"
+import choologo from "../../public/choo-logo.png"
 import "./globals.css";
 
 export default function Home() {
@@ -233,15 +239,19 @@ export default function Home() {
   return (
     <div className="flex flex-col overflow-x-hidden">
       {/* TITLE PAGE */}
-      <div className="h-screen bg-tagu-yellow flex flex-col justify-center">
-        <div>
-          <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-3vh] md:mb-[-5vh]">TA</p>
-          <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-2.8vh] md:mb-[-5vh]">GU</p>
+      <div id="titlePage" className="h-screen bg-tagu-yellow flex flex-col justify-between items-center p-8">
+        <div className="flex-1 flex flex-col justify-center">
+          <div>
+            <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-3vh] md:mb-[-5vh]">TA</p>
+            <p className="font-kare text-8xl md:text-[10rem] text-tagu-white text-center leading-none mb-[-2.8vh] md:mb-[-5vh]">GU</p>
+          </div>
+          <div className="font-balgin text-xl md:text-xl text-tagu-black text-center leading-none tracking-[1.8vw] ml-4 md:ml-9">CAFE</div>
         </div>
-        <div className="font-balgin text-xl md:text-xl text-tagu-black text-center leading-none tracking-[1.8vw] ml-4 md:ml-9">CAFE</div>
+        <a href="https://www.instagram.com/thetagucafe/" className="font-glacial text-tagu-black text-sm tracking-widest">@THETAGUCAFE</a>
       </div>
       {/* COFFEE PAGE */}
       <div id="coffeePage" className="bg-tagu-white p-12 lg:p-24 lg:items-end lg:pl-36 flex flex-col gap-8 lg:gap-12 md:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        <p id="nav" className="font-glacial text-tagu-red text-3xl -rotate-90 right-[-10.5vw] mt-27 z-50 absolute">COFFEE</p>
         <Image src={goldLeaf} className="absolute top-[-2.5vh] right-[-8vw] md:right-[-5vw] lg:right-[-1vw] w-28 md:w-32 xl:w-52 z-0" alt="leaf decoration" />
         {/* SIGNATURES AND ESPRESSO */}
         <div className="flex flex-col gap-8 md:flex-row lg:w-3/4 justify-start items-start z-30">
@@ -284,7 +294,8 @@ export default function Home() {
       </div>
       {/* BRUNCH PAGE */}
       <div id="brunchPage" className="bg-tagu-red p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-8 lg:gap-12 xl:gap-16 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
-        <Image src={goldTree} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
+        <p id="nav" className="font-glacial text-tagu-white text-3xl -rotate-90 right-[-10.5vw] mt-2 z-50 absolute">BRUNCH</p>
+        <Image src={goldTree} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-44 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
         {/* MAIN BRUNCH */}
         <div className="w-10/12 xl:w-3/5 2xl:w-3/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 z-30">
           {/* BRUNCH ITEMS */}
@@ -304,7 +315,8 @@ export default function Home() {
       </div>
       {/* MAINS PAGE */}
       <div id="MainPage" className="bg-tagu-blue p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-8 lg:gap-12 xl:gap-16 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
-        <Image src={eye} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
+        <p id="nav" className="font-glacial text-tagu-white text-3xl -rotate-90 right-[-7.5vw] mt-0 z-50 absolute ">MAINS</p>
+        <Image src={eye} className="absolute w-36 right-0 md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-60 rotate-145 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
         {/* MAIN BRUNCH */}
         <div className="w-10/12 xl:w-3/5 2xl:w-4/7 flex flex-row justify-between md:w-1/2 lg:w-3/4 xl:justify-start xl:gap-12 2xl:pt-4 2xl:mt-4 z-30 h-5/7 2xl:mb-[-4vh]">
           {/* BRUNCH ITEMS */}
@@ -320,7 +332,8 @@ export default function Home() {
       </div>
       {/* ALFRESCO PAGE */}
       <div id="AlfrescoPage" className="bg-tagu-brown p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-6 lg:gap-12 xl:gap-8 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
-        <Image src={eye} className="absolute w-36 right-[-16vw] md:right-26 lg:right-[-3vw] lg:w-52 md:w-42 top-40 xl:w-48 xl:right-[9vw] 2xl:right-[20vw] xl:top-[22vh] z-0" alt="tree decoration" />
+        <p id="nav" className="font-glacial text-tagu-white text-3xl -rotate-90 right-[-7.5vw] mt-0 z-50 absolute">MAINS</p>
+        <div className="bg-tagu-yellow w-[20rem] h-[20rem] rounded-full absolute z-0 bottom-[-25vh] right-[-20vw]"></div>
         {/* ALFRESCO TITLE*/}
         <div className="flex flex-col md:items-baseline">
           <div className="font-glacial font-bold text-lg xl:text-xl leading-none text-[#FBEFC1] ml-1 mb-2 2xl:mb-3">still mains but only</div>
@@ -339,13 +352,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="DrinksPage" className="bg-tagu-blue p-12 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-6 lg:gap-12 xl:gap-8 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
-        {/* TITLE */}
-        <div className="flex flex-col 2xl:flex-row 2xl:items-baseline 2xl:gap-2 2xl:mb-8">
+      {/* DRINKS PAGE */}
+      <div id="DrinksPage" className="bg-tagu-blue p-12 pb-8 lg:p-24 lg:pl-[21rem] xl:pl-[27rem] 2xl:pl-[35rem] flex flex-col gap-6 lg:gap-12 xl:gap-8 lg:h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        <div className="bg-tagu-red w-[15rem] h-[10rem] absolute z-0 right-10 top-[-5vh]
+          rounded-[40%_40%_50%_50%_/_30%_80%_50%_70%]
+          transform -rotate-6">
+        </div>
+        <div className="bg-tagu-yellow w-[30rem] h-[10rem] absolute z-0 right-[-10vw] bottom-[-10vh]
+          rounded-[40%_40%_50%_50%_/_30%_80%_50%_70%]
+          transform -rotate-6">
+        </div>
+        {/* DRINKS TITLE */}
+        <div className="flex flex-col 2xl:flex-row 2xl:items-baseline 2xl:gap-2 2xl:mb-8 z-20">
           <div className="font-kare text-[3rem] xl:text-7xl leading-none text-tagu-white mb-[-1.5vh]">alfresco</div>
           <div className="font-glacial text-lg xl:text-2xl leading-none text-tagu-white tracking-widest ml-1">DRINKS</div>
         </div>
-        <div className="flex flex-col 2xl:flex-row 2xl:gap-4 2xl:w-3/4">
+        <div className="flex flex-col 2xl:flex-row 2xl:gap-4 2xl:w-3/4 z-20">
           <div className="flex flex-col w-full">
             {/* MIXERS */}
             <div className="flex flex-col gap-2 mb-5 2xl:mb-24">
@@ -371,8 +393,78 @@ export default function Home() {
           </div>
         </div>
         {/* DISCLAIMER */}
-        <p className="text-tagu-white text-sm xl:text-base italic text-right font-glacial mt-6 2xl:mt-42">all items exclusive of 10% service charge</p>
+        <p className="text-tagu-white text-sm xl:text-base italic text-right font-glacial mt-8 2xl:mt-42 z-20">all items exclusive of 10% service charge</p>
       </div>
+      {/* CHOOS PAGE */}
+      <div id="ChoosPage" className="bg-tagu-pink h-screen w-screen relative overflow-y-hidden overflow-x-hidden">
+        {/* WALNUT */}
+        <div className="relative">
+          <Image 
+            src={walnut} 
+            alt="walnut" 
+            className="absolute w-[25rem] h-auto object-cover z-0 left-[-36vw] top-[-12vh]" 
+          />
+          <div className="absolute z-10 text-right mt-24 ml-8">
+            <p className="font-glacial font-bold text-3xl xl:text-xl leading-none mb-[-1vh] text-tagu-pink uppercase">Walnut</p>
+            <p className="font-glacial text-xl xl:text-xl leading-none text-tagu-pink">choos</p>
+          </div>
+        </div>
+        {/* OREO */}
+        <div className="relative">
+          <Image 
+            src={oreo} 
+            alt="oreo" 
+            className="absolute w-96 h-auto object-cover z-0 right-[-33vw] top-[-6vh]" 
+          />
+          <div className="absolute z-10 text-right mt-25 mr-10 right-0">
+            <p className="font-glacial font-bold text-3xl xl:text-xl leading-none mb-[-1vh] text-tagu-pink uppercase">Oreo</p>
+            <p className="font-glacial text-xl xl:text-xl leading-none text-tagu-pink">choos</p>
+          </div>
+        </div>
+        {/* CHEESEECAKE */}
+        <div className="relative">
+          <Image 
+            src={cheesecake} 
+            alt="cheesecake" 
+            className="absolute w-94 h-auto object-cover z-10 mt-52 ml-8" 
+          />
+          <div className="absolute z-10 text-left mt-88 mr-24 right-0">
+            <p className="font-glacial font-bold text-3xl xl:text-xl leading-none mb-[-1vh] text-tagu-pink uppercase">Cheesecake</p>
+            <p className="font-glacial text-xl xl:text-xl leading-none text-tagu-pink">choos</p>
+          </div>
+        </div>
+        {/* CHOO ASSET */}
+        <div className="relative">
+          <Image 
+            src={chooasset} 
+            alt="choo-asset" 
+            className="absolute w-54 h-auto object-cover z-0 mt-64 ml-[-23vw]" 
+          />
+        </div>
+        {/* CHOO ASSET 2*/}
+        <div className="relative">
+          <Image 
+            src={chooasset2} 
+            alt="choo-asset" 
+            className="absolute w-54 h-auto object-cover z-0 mt-87 mr-[-36vw] right-0" 
+          />
+        </div>
+        <div className="relative w-full bottom-[-62vh] left-10">
+          <p className="font-glacial text-tagu-brown text-lg">FOR ONLY P45</p>
+        </div>
+        {/* CHOO LOGO */}
+        <div className="relative w-full">
+          <Image 
+            src={choologo} 
+            alt="choo-logo" 
+            className="absolute w-full h-auto object-cover bottom-[-88vh] left-1/2 transform -translate-x-1/2" 
+          />
+        </div>
+        <div className="relative w-full bottom-[-89vh] text-center">
+          <a href="https://www.instagram.com/choo.ceb/" className="font-glacial text-tagu-brown text-lg">@choo.ceb</a>
+        </div>
+      </div>
+
     </div>
   );
 }

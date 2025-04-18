@@ -60,6 +60,7 @@
   --color-tagu-black: #474747;
   --color-tagu-blue: #1C404C;
   --color-tagu-orange: #CC4F42;
+  --color-tagu-pink: #F4DFE6;
 }
 
 @media (prefers-color-scheme: dark) {
